@@ -1,4 +1,6 @@
 #!/bin/bash
+
+
 echo " _____                       _                    _ __  ___  _    
 |  __ \                     | |                  | /_ |/ _ \| |   
 | |__) |____      _____ _ __| |     _____   _____| || | | | | | __
@@ -14,7 +16,7 @@ echo " _____                       _                    _ __  ___  _
 /_/    \_\__,_|\__\___/ \___\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__\___/|_|   
                                                __/ |                              
                                               |___/        
-""
+"
 echo "===============================================================================================
 --------------------------------------------------------------------------
 |			 	                                         |
@@ -125,13 +127,13 @@ if CheckSudo -eq 0; then
 	
 		if [ ! -d "$HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting" ];then
 		
-			echo -e "${YELLOW}Instalación du plugin zsh-syntax-highlighting${NOCOLOR}"
+			echo -e "${YELLOW}Installation du plugin zsh-syntax-highlighting${NOCOLOR}"
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting
 			mv zsh-syntax-highlighting/ $HOME/.oh-my-zsh/plugins
 			echo -e "${GREEN}Plugin zsh-syntax-highlighting instalado${NOCOLOR}"
 	
 		else
-			echo -e "${YELLOW}ré-instalación du plugin zsh-syntax-highlighting${NOCOLOR}"
+			echo -e "${YELLOW}ré-installation du plugin zsh-syntax-highlighting${NOCOLOR}"
 			rm -Rf $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting
 			mv zsh-syntax-highlighting/ $HOME/.oh-my-zsh/plugins
@@ -140,13 +142,13 @@ if CheckSudo -eq 0; then
 
 		if [ ! -d "$HOME/.oh-my-zsh/plugins/zsh-completions" ]
 		then
-			echo -e "${YELLOW}Instalación du plugin zsh-completions${NOCOLOR}"
+			echo -e "${YELLOW}Installation du plugin zsh-completions${NOCOLOR}"
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-completions
 			mv zsh-completions/ $HOME/.oh-my-zsh/plugins
 			echo -e "${GREEN}Plugin zsh-completions instalado${NOCOLOR}"
 		
 		else
-			echo -e "${YELLOW}re-instalación du plugin zsh-completions${NOCOLOR}"
+			echo -e "${YELLOW}ré-installation du plugin zsh-completions${NOCOLOR}"
 			rm -Rf $HOME/.oh-my-zsh/plugins/zsh-completions
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-completions
 			mv zsh-completions/ $HOME/.oh-my-zsh/plugins
@@ -155,13 +157,13 @@ if CheckSudo -eq 0; then
 
 		if [ ! -d "$HOME/.oh-my-zsh/plugins/zsh-autosuggestions" ]
 		then
-			echo -e "${YELLOW}Instalación del plugin zsh-autosuggestions${NOCOLOR}"
+			echo -e "${YELLOW}Installation du plugin zsh-autosuggestions${NOCOLOR}"
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-autosuggestions
 			mv zsh-autosuggestions/ $HOME/.oh-my-zsh/plugins
 			echo -e "${GREEN}Plugin zsh-autosuggestions instalado${NOCOLOR}"
 		
 		else
-			echo -e "${YELLOW}re-instalación del plugin zsh-autosuggestions${NOCOLOR}"
+			echo -e "${YELLOW}ré-installation du plugin zsh-autosuggestions${NOCOLOR}"
 			rm -Rf $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-autosuggestions
 			mv zsh-autosuggestions/ $HOME/.oh-my-zsh/plugins
@@ -173,7 +175,7 @@ if CheckSudo -eq 0; then
 	
 	if [ ! -d "$HOME/.oh-my-zsh/plugins/powerlevel10k" ]
 		then
-			echo -e "${YELLOW}Instalación del tema Powerlevel10k...${NOCOLOR}"
+			echo -e "${YELLOW}Installation del tema Powerlevel10k...${NOCOLOR}"
 			cd /tmp/ && git clone --quiet https://github.com/romkatv/powerlevel10k
 			mv powerlevel10k/ $HOME/.oh-my-zsh/themes/
 			sed -i 's|ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' $HOME/.zshrc
@@ -184,7 +186,7 @@ if CheckSudo -eq 0; then
 			cd /tmp/ && git clone --quiet https://github.com/romkatv/powerlevel10k
 			mv powerlevel10k/ $HOME/.oh-my-zsh/themes/
 			sed -i 's|ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' $HOME/.zshrc
-			echo -e "${GREEN}Tema Powerlevel10k instalado${NOCOLOR}"
+			echo -e "${GREEN}Thème Powerlevel10k instalado${NOCOLOR}"
 		fi
 		
 	
