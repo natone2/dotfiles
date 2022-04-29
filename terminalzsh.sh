@@ -1,49 +1,14 @@
 #!/bin/bash
 
-
-echo " _____                       _                    _ __  ___  _    
-|  __ \                     | |                  | /_ |/ _ \| |   
-| |__) |____      _____ _ __| |     _____   _____| || | | | | | __
-|  ___/ _ \ \ /\ / / _ \ '__| |    / _ \ \ / / _ \ || | | | | |/ /
-| |  | (_) \ V  V /  __/ |  | |___|  __/\ V /  __/ || | |_| |   < 
-|_|   \___/ \_/\_/ \___|_|  |______\___| \_/ \___|_||_|\___/|_|\_\
-
-               _                         __ _                       _             
-    /\        | |                       / _(_)                     | |            
-   /  \  _   _| |_ ___   ___ ___  _ __ | |_ _  __ _ _   _ _ __ __ _| |_ ___  _ __ 
-  / /\ \| | | | __/ _ \ / __/ _ \| '_ \|  _| |/ _` | | | | '__/ _` | __/ _ \| '__|
- / ____ \ |_| | || (_) | (_| (_) | | | | | | | (_| | |_| | | | (_| | || (_) | |   
-/_/    \_\__,_|\__\___/ \___\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__\___/|_|   
-                                               __/ |                              
-                                              |___/        
-"
-echo "===============================================================================================
---------------------------------------------------------------------------
-|			 	                                         |
-| Version 0.1		                                                 |
-|			                                                 |
-| Written by nat0ne                                                      |
-|                                                                        |
-|  This program is free software: you can redistribute it and/or modify  |
-|  it under the terms of the GNU General Public License as published by  |
-|  the Free Software Foundation, either version 3 of the License, or     |
-|  (at your option) any later version.                                   |
-|                                                                        |
-|  This program is distributed in the hope that it will be useful,       |
-|  but WITHOUT ANY WARRANTY; without even the implied warranty of        |
-|  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         |
-|  GNU General Public License for more details.                          |
-|                                                                        |
-|  You should have received a copy of the GNU General Public License     |
-|  along with this program.  If not, see <https://www.gnu.org/licenses/> |
-|                                                                        |		
---------------------------------------------------------------------------"
-echo ""
+## POWERLEVEL10K AUTOCONFIGURATOR
+## ALEX MEINHOF
 
 NOCOLOR='\033[0m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
 GREEN='\033[0;32m'
+
+echo "${YELLOW}POWELLEVEL10K AUTOCONFIGURATOR${NOCOLOR}"
 
 CheckSudo()
 {
@@ -127,13 +92,13 @@ if CheckSudo -eq 0; then
 	
 		if [ ! -d "$HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting" ];then
 		
-			echo -e "${YELLOW}Installation du plugin zsh-syntax-highlighting${NOCOLOR}"
+			echo -e "${YELLOW}Instalación del plugin zsh-syntax-highlighting${NOCOLOR}"
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting
 			mv zsh-syntax-highlighting/ $HOME/.oh-my-zsh/plugins
 			echo -e "${GREEN}Plugin zsh-syntax-highlighting instalado${NOCOLOR}"
 	
 		else
-			echo -e "${YELLOW}ré-installation du plugin zsh-syntax-highlighting${NOCOLOR}"
+			echo -e "${YELLOW}reinstalación del plugin zsh-syntax-highlighting${NOCOLOR}"
 			rm -Rf $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting
 			mv zsh-syntax-highlighting/ $HOME/.oh-my-zsh/plugins
@@ -142,13 +107,13 @@ if CheckSudo -eq 0; then
 
 		if [ ! -d "$HOME/.oh-my-zsh/plugins/zsh-completions" ]
 		then
-			echo -e "${YELLOW}Installation du plugin zsh-completions${NOCOLOR}"
+			echo -e "${YELLOW}Instalación del plugin zsh-completions${NOCOLOR}"
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-completions
 			mv zsh-completions/ $HOME/.oh-my-zsh/plugins
 			echo -e "${GREEN}Plugin zsh-completions instalado${NOCOLOR}"
 		
 		else
-			echo -e "${YELLOW}ré-installation du plugin zsh-completions${NOCOLOR}"
+			echo -e "${YELLOW}reinstalación du plugin zsh-completions${NOCOLOR}"
 			rm -Rf $HOME/.oh-my-zsh/plugins/zsh-completions
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-completions
 			mv zsh-completions/ $HOME/.oh-my-zsh/plugins
@@ -157,13 +122,13 @@ if CheckSudo -eq 0; then
 
 		if [ ! -d "$HOME/.oh-my-zsh/plugins/zsh-autosuggestions" ]
 		then
-			echo -e "${YELLOW}Installation du plugin zsh-autosuggestions${NOCOLOR}"
+			echo -e "${YELLOW}Instalación del plugin zsh-autosuggestions${NOCOLOR}"
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-autosuggestions
 			mv zsh-autosuggestions/ $HOME/.oh-my-zsh/plugins
 			echo -e "${GREEN}Plugin zsh-autosuggestions instalado${NOCOLOR}"
 		
 		else
-			echo -e "${YELLOW}ré-installation du plugin zsh-autosuggestions${NOCOLOR}"
+			echo -e "${YELLOW}reinstalación del plugin zsh-autosuggestions${NOCOLOR}"
 			rm -Rf $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
 			cd /tmp/ && git clone --quiet https://github.com/zsh-users/zsh-autosuggestions
 			mv zsh-autosuggestions/ $HOME/.oh-my-zsh/plugins
@@ -175,7 +140,7 @@ if CheckSudo -eq 0; then
 	
 	if [ ! -d "$HOME/.oh-my-zsh/plugins/powerlevel10k" ]
 		then
-			echo -e "${YELLOW}Installation del tema Powerlevel10k...${NOCOLOR}"
+			echo -e "${YELLOW}Instalación del tema Powerlevel10k...${NOCOLOR}"
 			cd /tmp/ && git clone --quiet https://github.com/romkatv/powerlevel10k
 			mv powerlevel10k/ $HOME/.oh-my-zsh/themes/
 			sed -i 's|ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' $HOME/.zshrc
@@ -186,7 +151,7 @@ if CheckSudo -eq 0; then
 			cd /tmp/ && git clone --quiet https://github.com/romkatv/powerlevel10k
 			mv powerlevel10k/ $HOME/.oh-my-zsh/themes/
 			sed -i 's|ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' $HOME/.zshrc
-			echo -e "${GREEN}Thème Powerlevel10k instalado${NOCOLOR}"
+			echo -e "${GREEN}Tema Powerlevel10k instalado${NOCOLOR}"
 		fi
 		
 	
