@@ -164,7 +164,7 @@ if CheckSudo -eq 0; then
 	
 else 
 
-	echo -e "${RED}El script no pudo ejecutarse con sudo${NOCOLOR}"
+	echo -e "${RED}El script no puede ser ejecutado con sudo${NOCOLOR}"
 	exit
 	
 fi 
