@@ -110,17 +110,18 @@ source $ZSH/oh-my-zsh.sh
 YELLOW='\033[1;33m'
 GREEN='\033[0;32m'
 NOCOLOR='\033[0m'
+BLUE='\e[1;34m'
 
 # Functions
 function mkt(){
 	mkdir {nmap,content,exploits,scripts}
 }
 function speed(){
-	echo -e "${YELLOW}COMENZANDO EL TEST DE VELOCIDAD...${GREEN}"
+	echo -e "${YELLOW}COMENZANDO EL TEST DE VELOCIDAD...${BLUE}"
 	sleep 2
 	speedtest-cli
 	sleep 1
-	echo -e "${YELLOW}↑↑↑↑RESULTADO↑↑↑↑${NOCOLOR}"
+	echo -e "${YELLOW}↑↑↑↑ RESULTADO ↑↑↑↑${NOCOLOR}"
 }
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
