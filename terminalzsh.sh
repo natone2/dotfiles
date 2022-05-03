@@ -134,6 +134,24 @@ if CheckSudo -eq 0; then
 			mv zsh-autosuggestions/ $HOME/.oh-my-zsh/plugins
 			echo -e "${GREEN}Plugin zsh-autosuggestions instaldo${NOCOLOR}"
 		fi
+
+
+		if [ ! -d "/tmp/lsd-musl_0.21.0_amd64.deb" ]
+		then
+			echo -e "${YELLOW}Instalación del plugin lsd${NOCOLOR}"
+			cd /tmp/ && wget --quiet https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd-musl_0.21.0_amd64.deb
+			sudo dpkg -i lsd-musl_0.21.0_amd64.deb
+			echo -e "${GREEN}Plugin lsd instalado${NOCOLOR}"
+		
+		else
+			echo -e "${YELLOW}reinstalación del plugin lsd${NOCOLOR}"
+			rm -Rf /tmp/lsd-musl_0.21.0_amd64.deb
+			cd /tmp/ && wget --quiet https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd-musl_0.21.0_amd64.deb
+			sudo dpkg -i lsd-musl_0.21.0_amd64.deb
+			echo -e "${GREEN}Plugin lsd instalado${NOCOLOR}"
+		fi
+
+
 	
 	
 	sed -i 's/plugins=(git)/plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions)/' $HOME/.zshrc
