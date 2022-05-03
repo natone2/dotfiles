@@ -140,7 +140,7 @@ if CheckSudo -eq 0; then
 		then
 			echo -e "${YELLOW}Instalación del plugin lsd${NOCOLOR}"
 			cd /tmp/ && wget --quiet https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd-musl_0.21.0_amd64.deb
-			sudo dpkg -i lsd-musl_0.21.0_amd64.deb
+			sudo dpkg --quiet -i lsd-musl_0.21.0_amd64.deb
 			echo -e "${GREEN}Plugin lsd instalado${NOCOLOR}"
 		
 		else
@@ -151,23 +151,23 @@ if CheckSudo -eq 0; then
 			echo -e "${GREEN}Plugin lsd instalado${NOCOLOR}"
 		fi
 
-		if [ ! -d "/usr/bin/micro" ]
-		then
-			echo -e "${YELLOW}Instalación del editor micro${NOCOLOR}"
-			wget https://github.com/zyedidia/micro/releases/download/v1.3.1/micro-1.3.1-linux64.tar.gz
-			tar -xvf micro-linux64.tar.gz
-			cd micro-1.3.1
-			./micro
-			echo -e "${GREEN}Editor micro instalado${NOCOLOR}"
-		
-		else
-			echo -e "${YELLOW}reinstalación del editor micro${NOCOLOR}"
-			wget https://github.com/zyedidia/micro/releases/download/v1.3.1/micro-1.3.1-linux64.tar.gz
-			tar -xvf micro-linux64.tar.gz
-			cd micro-1.3.1
-			./micro
-			echo -e "${GREEN}Editor micro instalado${NOCOLOR}"
-		fi	
+		## if [ ! -d "/usr/bin/micro" ]
+		## then
+		##	echo -e "${YELLOW}Instalación del editor micro${NOCOLOR}"
+		##	wget https://github.com/zyedidia/micro/releases/download/v1.3.1/micro-1.3.1-linux64.tar.gz
+		##	tar -xvf micro-linux64.tar.gz
+		##	cd micro-1.3.1
+		##	./micro
+		##	echo -e "${GREEN}Editor micro instalado${NOCOLOR}"
+		 
+		## else
+		##	echo -e "${YELLOW}reinstalación del editor micro${NOCOLOR}"
+		##	wget https://github.com/zyedidia/micro/releases/download/v1.3.1/micro-1.3.1-linux64.tar.gz
+		##	tar -xvf micro-linux64.tar.gz
+		##	cd micro-1.3.1
+		##	./micro
+		##	echo -e "${GREEN}Editor micro instalado${NOCOLOR}"
+		## fi	
 	
 	sed -i 's/plugins=(git)/plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions)/' $HOME/.zshrc
 	
