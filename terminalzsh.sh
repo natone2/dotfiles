@@ -154,12 +154,18 @@ if CheckSudo -eq 0; then
 		if [ ! -d "/usr/bin/micro" ]
 		then
 			echo -e "${YELLOW}Instalación del editor micro${NOCOLOR}"
-			sudo apt install --quiet -y micro
+			wget https://github.com/zyedidia/micro/releases/download/v1.3.1/micro-1.3.1-linux64.tar.gz
+			tar -xvf micro-linux64.tar.gz
+			cd micro-1.3.1
+			./micro
 			echo -e "${GREEN}Editor micro instalado${NOCOLOR}"
 		
 		else
 			echo -e "${YELLOW}reinstalación del editor micro${NOCOLOR}"
-			sudo apt install --quiet --reinstall micro
+			wget https://github.com/zyedidia/micro/releases/download/v1.3.1/micro-1.3.1-linux64.tar.gz
+			tar -xvf micro-linux64.tar.gz
+			cd micro-1.3.1
+			./micro
 			echo -e "${GREEN}Editor micro instalado${NOCOLOR}"
 		fi	
 	
