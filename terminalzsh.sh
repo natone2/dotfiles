@@ -14,7 +14,7 @@ CheckSudo()
 {
 
 if [ $EUID -eq 0 ]; then
-	echo -e "${RED}El script debe ser lanzado con sudo"
+	echo -e "${RED}El script no debe ser lanzado con sudo"
 
     exit $?
 
