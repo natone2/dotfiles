@@ -3,13 +3,13 @@ This is my zsh config with his scripts
 
 ##### Usage for terminalzsh (pw10k autoconfigurator)
 ***never use as root***
-~~~
+```zsh
 chmod +x terminalzsh.sh
 
 ./terminalzsh.sh
-~~~
+```
 ##### zshrc file for fast config (maybe the repo code will be newest)
-~~~
+```zsh
 # Config file by natone2
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -138,6 +138,6 @@ alias nanon='nano'
 alias speed='speedtest-cli'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-~~~
+```
 
 
