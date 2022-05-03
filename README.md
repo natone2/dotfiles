@@ -117,12 +117,23 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+# Variables
+
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NOCOLOR='\033[0m'
 
 # Functions
 function mkt(){
 	mkdir {nmap,content,exploits,scripts}
 }
-
+function speed(){
+	echo -e "${YELLOW}COMENZANDO EL TEST DE VELOCIDAD...${GREEN}"
+	sleep 2
+	speedtest-cli
+	sleep 1
+	echo -e "${YELLOW}↑↑↑↑RESULTADO↑↑↑↑${NOCOLOR}"
+}
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -135,9 +146,9 @@ alias ls='lsd --group-dirs=first'
 alias cat='batcat'
 alias nano='micro'
 alias nanon='nano'
-alias speed='speedtest-cli'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 ```
 
 
