@@ -5,7 +5,7 @@ This is my zsh config with his scripts
 ~~~
 ## never run as root
 
-chmod +x terminalzsh.sh
+`chmod +x terminalzsh.sh
 
-./terminalzsh.sh
+./terminalzsh.sh`
 ~~~
