@@ -10,18 +10,18 @@ GREEN='\033[0;32m'
 
 echo -e "${YELLOW}POWELLEVEL10K AUTOCONFIGURATOR"
 
-######## SUPERUSER SCRIPT ####################################
 
-##CheckSudo()
-##{
 
-##if [ $EUID -eq 0 ]; then
-##	echo -e "${RED}El script no debe ser lanzado con sudo"
+CheckSudo()
+{
 
-##    exit $?
+if [ $EUID -eq 1 ]; then
+	echo -e "${RED}El script debe ser lanzado con sudo"
 
-##fi
-##}
+    exit $?
+
+fi
+}
 
 ##############################################################
 
@@ -74,7 +74,7 @@ fi
 
 }
 
-if CheckSudo -eq 0; then
+if CheckSudo -eq 1; then
 
 	echo -e "${YELLOW}Verificación de los paquetes necesarios para la instalación...${NOCOLOR}" && Install_Packages
 	
