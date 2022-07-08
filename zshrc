@@ -123,7 +123,7 @@ function speed(){
 	sleep 1
 	echo -e "${YELLOW}↑↑↑↑ RESULTADO ↑↑↑↑${NOCOLOR}"
 }
-function info*(){
+function info(){
 	neofetch
 }
 # Example aliases
