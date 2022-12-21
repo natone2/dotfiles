@@ -103,6 +103,7 @@ else
   # Instalamos Comice Control Center V2 desde GitHub
   git clone https://github.com/natone2/comice-control-center-v2.git
   cd comice-control-center-v2
-  sudo make install
+  chmod +x comice-control-center
+  ./comice-control-center
   cd ..
 fi
