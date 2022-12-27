@@ -97,7 +97,7 @@ else
 fi
 
 # Comprobamos si ya está instalado Comice Control Center V2
-if [ -d /usr/share/comice-control-center-v2 ]; then
+if [ -d /home/alex/.config/comice-control-center-v2 ]; then
   echo "Comice Control Center V2 ya está instalado"
 else
   # Instalamos Comice Control Center V2 desde GitHub
